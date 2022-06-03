@@ -18,9 +18,9 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 	},
 	"id": {
 		"type": "string",
-		"value": "a 5 digit alpha-numeric string used to identify the proposal.
+		"value": "a 10 digit case insensitive alpha-numeric string used to identify the proposal.
 		This should be generated randomly and should be unique across all proposals.
-		This string cannot contain any special characters. For example 1Efvv is acceptable but 1._$4 is not."
+		This string cannot contain any special characters. For example 1e6ttkjfvv is acceptable but 1.^jta_$4% is not."
 	},
 	"options": {
 		"type": "array",
@@ -97,7 +97,7 @@ Example:
 	"name": "What is your favorite color?",
 	"description": "We want to know our holders’ favorite colors.",
 	"collections": ["3208723ec6f65df810-SHELF"],
-	"id": "rF5yB",
+	"id": "1e6ttkjfvv",
 	"options": ["Red", "Blue", "Yellow", "Green", "Orange", "Purple", "Pink"],
 	"holdRequirement": 144000,
 	"passingThreshold": 20,
