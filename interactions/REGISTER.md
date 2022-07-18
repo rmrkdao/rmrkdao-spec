@@ -4,7 +4,7 @@ The REGISTER interaction registers a wallet as a [custodian](../entities/custodi
 This signals to the ecosystem that the wallet operator is willing to count the votes of [proposals](../entities/proposal.md)
 that are assigned to them. Collection issuers need to ensure they are selecting a reputable custodian.
 However, if a custodian does not follow through on a count, the collection issuer can always issue
-a [RECERTIFY](./recertify.md) interaction to assign a different custodian to count the votes of a proposal.
+a [RECERTIFY](recertify.md) interaction to assign a different custodian to count the votes of a proposal.
 
 ## Standard
 
@@ -16,7 +16,7 @@ A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::DAO:
 A custodian may declare separate fees for separate versions of the RMRK standard. Custodians
 do not need to register for all versions of RMRK if they choose not to.
 
-**A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 14,400 BLOCKS (~24 HOURS), EVEN IF THEY [DEREGISTER](./deregister.md)**.
+**A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 14,400 BLOCKS (~24 HOURS), EVEN IF THEY [DEREGISTER](deregister.md)**.
 
 ## Considerations
 
