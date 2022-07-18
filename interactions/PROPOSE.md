@@ -9,6 +9,7 @@ Equippables can also be used as boosts or requirements which do not necessarily 
 A PROPOSE interaction is a [batchAll or batch](https://polkadot.js.org/docs/api/cookbook/tx#how-can-i-batch-transactions) call of a system remark and a token transfer.
 
 **`system.remark`**
+
 The format for the system remarks is `0x{bytes(RMRK::DAO::PROPOSE::{version}::{html-encoded json})}`
 - `version` is the version of RMRK of the subjected collections. (e.g. `1.0.0`, `2.0.0`)
 - `html-encoded json` is the encoded [proposal](../entities/proposal.md) entity
