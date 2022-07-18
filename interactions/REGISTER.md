@@ -16,7 +16,7 @@ A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::DAO:
 A custodian may declare separate fees for separate versions of the RMRK standard. Custodians
 do not need to register for all versions of RMRK if they choose not to.
 
-**A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 14,400 BLOCKS (~24 HOURS), EVEN IF THEY [DEREGISTER](deregister.md)**.
+**A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 14,400 BLOCKS (~24 HOURS), EVEN IF THEY [DEREGISTER](DEREGISTER.md)**.
 
 ## Considerations
 
