@@ -43,7 +43,7 @@ given the parameters of the proposal.
 
 `equippableParameters`: this can only be included if the proposal is for a collection that supports child NFTs and the EQUIP interaction (i.e. RMRK version 2.0.0 or greater). This option is allowed for 2.0.0 NFT collections that might not have BASE functionality - it is the responsibility of the issuer to know the limits of their collections' equippables and the ramification of including this option in a proposal for those collections.
 
-## Example:
+## Example
 
 Let's say the issuer of `3208723ec6f65df810-SHELF` wants to ask holders what their favorite color is and assign `GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM` as the custodian:
 
