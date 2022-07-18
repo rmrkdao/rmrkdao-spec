@@ -76,7 +76,8 @@ Let's say the issuer of `3208723ec6f65df810-SHELF` wants to ask holders what the
 {
 	"custodian": "GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM",
 	"proposalFee": "110000000000",
-	"voteFee": "50000000000"
+	"voteFee": "50000000000",
+	"recertifyFee": "1000000000000"
 }
 ```
 
