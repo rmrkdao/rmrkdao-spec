@@ -16,6 +16,10 @@ A registered custodian is responsible for tracking when they are assigned to a p
 	"voteFee": {
 		"type": "string",
 		"value": "the amount of Planck KSM required for a voter to pay a custodian to ensure their vote is counted. For example 10000000000 = is equal to 0.01 KSM."
+	},
+	"recertifyFee": {
+		"type": "string",
+		"value": "the amount of Planck KSM required for a collection issuer to pay a custodian to recertify a count."
 	}
 }
 ```
@@ -26,6 +30,7 @@ A registered custodian is responsible for tracking when they are assigned to a p
 {
 	"custodian": "GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM",
 	"proposalFee": "110000000000",
-	"voteFee": "50000000000"
+	"voteFee": "50000000000",
+	"recertifyFee": "1000000000000"
 }
 ```
