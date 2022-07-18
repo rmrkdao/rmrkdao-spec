@@ -8,11 +8,11 @@ The DEREGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::
 
 - `version` is the version of RMRK of the subjected collections (e.g. `1.0.0`, `2.0.0`)
 
-A cool-off period of 24 hours is required before a custodian can [REGISTER](./register.md) again.
+A cool-off period of 24 hours is required before a custodian can [REGISTER](REGISTER.md) again.
 
 ## Considerations
 
-If in the unlikely case a [PROPOSE](./propose.md) or [RECERTIFY](./recertify.md) interaction assigns a custodian in the same block that custodian DEREGISTERS,
+If in the unlikely case a [PROPOSE](PROPOSE.md) or [RECERTIFY](RECERTIFY.md) interaction assigns a custodian in the same block that custodian DEREGISTERS,
 that custodian is still obligated to count the votes.
 
 ## Example
