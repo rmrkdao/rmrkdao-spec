@@ -91,7 +91,7 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 	}
 }
 ```
-Example:
+## Example
 ```
 {
 	"name": "What is your favorite color?",
