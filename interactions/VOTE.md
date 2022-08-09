@@ -32,7 +32,7 @@ from `3208723ec6f65df810-ITEM` and one NFT from `3208723ec6f65df810-ITEMXRMRK` e
 accompanied with a balance transfer of 0.05 KSM to `GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM`:
 
 ```
-RMRK::DAO::VOTE::1e6ttkjfvv::Red
+RMRK::DAO::VOTE::2.0.0::1e6ttkjfvv::Red
 ```
 
 Their vote would be given a vote weight of 1.25 since they meet a boost requirement.
