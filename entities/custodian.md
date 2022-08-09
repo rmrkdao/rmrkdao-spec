@@ -7,7 +7,7 @@ A registered custodian is responsible for tracking when they are assigned to a p
 {
 	"custodian": {
 		"type": "string",
-		"value": "the KSM wallet of the custodian. Must be the same wallet as the one submitting the REGISTER interaction. For example: GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM."
+		"value": "the KSM wallet of the custodian. Must be the same wallet as the one submitting the REGISTER interaction. For example: "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17"
 	},
 	"proposalFee": {
 		"type": "string",
@@ -31,7 +31,7 @@ A registered custodian is responsible for tracking when they are assigned to a p
 
 ```
 {
-	"custodian": "GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM",
+	"custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
 	"proposalFee": "110000000000",
 	"voteFee": "50000000000",
 	"recertifyFee": "1000000000000",
