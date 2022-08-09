@@ -33,9 +33,9 @@ A result entity is the certified vote count of a proposal from a custodian, whet
 			}
 		]
 	},
-	"winningOption": {
-		"type": "string",
-		"value": "the option with the most votes. If none of the options meet the passingThreshold, this should be an empty string"
+	"winningOptions": {
+		"type": "array",
+		"value": "the option(s) with the most votes. If none of the options meet the passingThreshold, this should be an empty array. More than one value implies a tie."
 	},
 	"electorate": {
 		"type": "boolean",
@@ -71,7 +71,7 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
 		{"Purple": 300},
 		{"Pink": 700.25}
 	],
-	"winningOption": "Pink",
+	"winningOptions": ["Pink"],
 	"electorate": false,
 	"thresholdDenominator": 1436.75,
 	"recertify": false
