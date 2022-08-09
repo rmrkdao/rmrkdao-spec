@@ -30,10 +30,6 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 		"type": "datetime",
 		"value": "(optional) the Unix timestamp when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, the snapshot date = endDate."
 		},
-	"?holdRequirement": {
-		"type": "number",
-		"value": "(optional) the number of blocks before the snapshot date that a holder needs to own an NFT in order to vote. If omitted, this value defaults to 1."
-	},
 	"?passingThreshold": {
 		"type": "number",
 		"value": "(optional) the percentage of the turnout vote that an option needs in order to pass. If omitted, a simple majority is used."
@@ -63,31 +59,6 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   		If there are 50 unique owners of a collection of 100 NFTs, the electorate's vote weight would equal 100 if nftWeight = true, and 50 if false.
   		If there are boosts in a proposal, the maximum potential of vote weight at the time of the snapshot will be considered the weight of the electorate.
   		For example, if there are 100 NFTs in the proposal's respective collection and 1000 possible equippables that give a 0.5 boost, but only 2 slots for these NFTs in the base resource assigned to the NFTs in the proposal's respective collection, the electorate's total possible vote weight would be equal to 200." 
-	},
-	"?equippableParameters": {
-		"type": "object",
-		"value": {
-			"?requiredEquippables": {
-				"type": "array",
-				"value": "an array of collection ids that all must be equipped (i.e. not pending) to an NFT in the proposal's respective collection."
-			},
-			"?thresholdEquippables": {
-				"type": "array",
-				"value": "an array of collection ids that, when equipped to an NFT in the proposal's respective collection, count toward a threshold required for that NFT's vote to count."
-			},
-			"?threshold": {
-				"type": "number",
-				"value": "the minimum threshold required of equipped NFTs in the thresholdEquippables array for an NFT's vote to count. If omitted, this value defaults to 0."
-			},
-			"?boostEquippables": {
-				"type": "array",
-				"value": "an array of collection ids that, when equipped to an NFT in the proposal's respective collection, count toward a voting boost."
-			},
-			"?boost": {
-				"type": "number",
-				"value": "the vote boost per NFT equipped in the boostEquippables. If omitted, this value defaults to 1."
-			}
-		}
 	}
 }
 ```
@@ -99,24 +70,17 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 	"collections": ["3208723ec6f65df810-SHELF"],
 	"id": "1e6ttkjfvv",
 	"options": ["Red", "Blue", "Yellow", "Green", "Orange", "Purple", "Pink"],
-	"holdRequirement": 144000,
 	"passingThreshold": 20,
 	"startDate": 1654041600,
 	"endDate": 1654560000,
-	"custodian": "GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM",
+	"custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
 	"nftWeight": true,
-	"electorate": false,
-	"equippableParameters": {
-		"thresholdEquippables": ["3208723ec6f65df810-ITEM"],
-		"threshold": 3,
-		"boostEquippables": ["3208723ec6f65df810-ITEMXRMRK", "3208723ec6f65df810-ITEMXEVRLOOT"],
-		"boost": 0.25
-	}
+	"electorate": true
 }
 ```
-This 20% minimum majority of turnout proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
+This 20% minimum majority of the electorate proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
 
 - The first block whose timestamp exceeds or equals the startDate is the inclusive start block of the proposal.
 - The first block whose timestamp exceeds or equals the endDate is the inclusive end block of the proposal.
 
-The snapshot will be taken at the endDate block and holders are required to hold their NFTs for at least 144000 blocks before the snapshot (~10 days). Holders are required to have at least 3 NFTs from the collection `3208723ec6f65df810-ITEM` equipped in order for their vote to count. For every NFT equipped from either `3208723ec6f65df810-ITEMXRMRK` or `3208723ec6f65df810-ITEMXEVRLOOT` will add a 0.25 vote boost to their vote. And each NFT is given voting consideration.
+The snapshot will be taken at the endDate.
