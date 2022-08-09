@@ -20,7 +20,10 @@ A registered custodian is responsible for tracking when they are assigned to a p
 	"recertifyFee": {
 		"type": "string",
 		"value": "the amount of Planck KSM required for a collection issuer to pay a custodian to recertify a count."
-	}
+	},
+	"maxOptions": {
+		"type": "number",
+		"value": "the maximum number of options the custodian is willing to accept in a proposal."
 }
 ```
 
@@ -31,6 +34,7 @@ A registered custodian is responsible for tracking when they are assigned to a p
 	"custodian": "GoStbrvU2yXDXLJMC2qHkvuy6aqHk1wLLAufht83d5ESURM",
 	"proposalFee": "110000000000",
 	"voteFee": "50000000000",
-	"recertifyFee": "1000000000000"
+	"recertifyFee": "1000000000000",
+	"maxOptions": 100
 }
 ```
