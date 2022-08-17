@@ -6,10 +6,10 @@ that are assigned to them. Collection issuers need to ensure they are selecting 
 
 ## Standard
 
-A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::DAO::REGISTER::{version}::{html-encoded json})}`
+A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::DAO::REGISTER::{version}::{url-encoded json})}`
 
 - `version` is the version of RMRK of the subjected collections (e.g. ~~`1.0.0`~~, `2.0.0`)
-- `html-encoded json` is the encoded [custodian](../entities/custodian.md) entity
+- `url-encoded json` is the encoded [custodian](../entities/custodian.md) entity
 
 ## Example
 
