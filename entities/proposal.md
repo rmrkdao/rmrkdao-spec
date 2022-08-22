@@ -6,11 +6,11 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 {
   "name": {
     "type": "string",
-    "value": "the name of the proposal, i.e. the question you are asking."
+    "value": "the name of the proposal, i.e. the question you are asking. Limit 10,000 characters."
   },
   "description": {
     "type": "string",
-    "value": "a description for the proposal, background information, reasoning, etc."
+    "value": "a description for the proposal, background information, reasoning, etc. Limit 10,000 characters."
   },
   "collections": {
     "type": "array",
@@ -22,11 +22,11 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   },
   "options": {
     "type": "array",
-    "value": ["option 1","option 2", "..." , "option n (minimum of 2)"]
+    "value": ["option 1 (limit 10,000 characters)","option 2 (limit 10,000 characters)", "..." , "option n (minimum of 2) (limit 10,000 characters)"]
   },
   "?snapshot": {
     "type": "number",
-    "value": "(optional) the Unix timestamp when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate."
+    "value": "(optional) the Unix timestamp when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
   },
   "?passingThreshold": {
     "type": "number",
@@ -34,11 +34,11 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   },
   "?startDate": {
     "type": "number",
-    "value": "(optional) the Unix timestamp when voting starts. If omitted, the timestamp of the block of the proposal creation will be used as the start date."
+    "value": "(optional) the Unix timestamp when voting starts. If omitted, the timestamp of the block of the proposal creation will be used as the start date. Limit 365 days after date of proposal submission on-chain."
   },
   "endDate": {
     "type": "number",
-    "value": "the Unix timestamp when voting ends, must be at least 1 minute after startDate"
+    "value": "the Unix timestamp when voting ends, must be at least 1 minute after startDate and at most 365 days after startDate"
   },
   "custodian": {
     "type": "string",
@@ -50,7 +50,7 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   },
   "electorate": {
     "type": "boolean",
-    "value": "If true, the passing threshold is weighed against the entire electorate's vote weight.\n\nFor example, if there are 100 possible votes in the electorate and there are three options (A, B, C) to a proposal, if this key is true and passingThreshold is omitted, then in order for option A to pass there needs to be greater than 50 votes. If the result of this vote is A: 40, B: 20, C: 10, D: 30, none of the options pass. However in this example, if this key is false, option A would pass. The electorate vote weight depends on a couple parameters. If there are 50 unique owners of a collection of 100 NFTs, the electorate's vote weight would equal 100 if nftWeight = true, and 50 if false. If there are boosts in a proposal, the maximum potential of vote weight at the time of the snapshot will be considered the weight of the electorate. For example, if there are 100 NFTs in the proposal's respective collection and 1000 possible equippables that give a 0.5 boost, but only 2 slots for these NFTs in the base resource assigned to the NFTs in the proposal's respective collection, the electorate's total possible vote weight would be equal to 200." 
+    "value": "If true, the passing threshold is weighed against the entire electorate's vote weight.\n\nFor example, if there are 100 possible votes in the electorate and there are three options (A, B, C) to a proposal, if this key is true and passingThreshold is omitted, then in order for option A to pass there needs to be greater than 50 votes. If the result of this vote is A: 40, B: 20, C: 10, D: 30, none of the options pass. However in this example, if this key is false, option A would pass. The electorate vote weight depends on a couple parameters. If there are 50 unique owners of a collection of 100 NFTs, the electorate's vote weight would equal 100 if nftWeight = true, and 50 if false." 
   }
 }
 ```
