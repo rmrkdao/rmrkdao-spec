@@ -10,9 +10,9 @@ A PROPOSE interaction is a [batchAll](https://polkadot.js.org/docs/api/cookbook/
 
 **`system.remark`**
 
-The format for the system remarks is `0x{bytes(RMRKDAO::PROPOSE::{version}::{html-encoded json})}`
+The format for the system remarks is `0x{bytes(RMRKDAO::PROPOSE::{version}::{url-encoded json})}`
 - `version` is the version of RMRK of the subjected collections. (e.g. ~~`1.0.0`~~, `2.0.0`)
-- `html-encoded json` is the encoded [proposal](../entities/proposal.md) entity
+- `url-encoded json` is the encoded [proposal](../entities/proposal.md) entity
 
 **`balances.transfer`**
 
