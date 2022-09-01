@@ -26,19 +26,19 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   },
   "?snapshot": {
     "type": "number",
-    "value": "(optional) the Unix timestamp when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
+    "value": "(optional) the Unix timestamp in milliseconds when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
   },
   "?passingThreshold": {
     "type": "number",
-    "value": "(optional) the percentage of the turnout vote that an option needs in order to pass. If omitted, a simple majority is used."
+    "value": "(optional) the percentage of the turnout vote that an option needs in order to pass (e.g. a percentage of 20 means 20%). If omitted, a simple majority is used."
   },
   "?startDate": {
     "type": "number",
-    "value": "(optional) the Unix timestamp when voting starts. If omitted, the timestamp of the block of the proposal creation will be used as the start date. Limit 365 days after date of proposal submission on-chain."
+    "value": "(optional) the Unix timestamp in milliseconds when voting starts. If omitted, the timestamp of the block of the proposal creation will be used as the start date. Limit 365 days after date of proposal submission on-chain."
   },
   "endDate": {
     "type": "number",
-    "value": "the Unix timestamp when voting ends, must be at least 1 minute after startDate and at most 365 days after startDate"
+    "value": "the Unix timestamp in milliseconds when voting ends, must be at least 1 minute after startDate and at most 365 days after startDate"
   },
   "custodian": {
     "type": "string",
@@ -63,8 +63,8 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 	"id": "1e6ttkjfvv",
 	"options": ["Red", "Blue", "Yellow", "Green", "Orange", "Purple", "Pink"],
 	"passingThreshold": 20,
-	"startDate": 1654041600,
-	"endDate": 1654560000,
+	"startDate": 1654041600000,
+	"endDate": 1654560000000,
 	"custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
 	"nftWeight": true,
 	"electorate": true
