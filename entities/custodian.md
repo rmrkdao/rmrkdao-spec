@@ -1,7 +1,7 @@
 # Custodian
 
 A custodian is the entity that is responsible for the tally of a [proposal](proposal.md)'s votes. A proposal must have a custodian assigned to it.
-A registered custodian is responsible for tracking when they are assigned to a proposal and is also responsible for counting the vote according to the RMRK::DAO standard.
+A registered custodian is responsible for tracking when they are assigned to a proposal and is also responsible for counting the vote according to the RMRKDAO standard.
 
 ```json
 {
