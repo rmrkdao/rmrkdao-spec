@@ -8,7 +8,7 @@ The DEREGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRKDA
 
 - `version` is the version of RMRK of the subjected collections (e.g. ~~`1.0.0`~~, `2.0.0`)
 
-A cool-off period of 24 hours is required before a custodian can [REGISTER](REGISTER.md) again.
+A cool-off period of 24 hours (86,400,000 milliseconds) is required before a custodian can [REGISTER](REGISTER.md) again.
 
 ## Considerations
 
