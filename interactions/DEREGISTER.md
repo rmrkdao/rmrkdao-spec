@@ -4,7 +4,7 @@ The DEREGISTER interactions removes a [custodian](../entities/custodian.md) from
 
 ## Standard
 
-The DEREGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRK::DAO::DEREGISTER::{version})}`
+The DEREGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRKDAO::DEREGISTER::{version})}`
 
 - `version` is the version of RMRK of the subjected collections (e.g. ~~`1.0.0`~~, `2.0.0`)
 
@@ -21,5 +21,5 @@ Let's assume `DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17` is a registered c
 `2.0.0` votes, they would submit:
 
 ```
-RMRK::DAO::DEGREGISTER::2.0.0
+RMRKDAO::DEGREGISTER::2.0.0
 ```
