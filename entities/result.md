@@ -66,7 +66,7 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
     "5": 300,
     "6": 700.25
   },
-  "winningOptions": ["Pink"],
+  "winningOptions": [6],
   "electorate": false,
   "thresholdDenominator": 1436.75,
   "recertify": false
