@@ -21,8 +21,13 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
     "value": "this spec suggests a 10 digit case sensitive alpha-numeric string used to identify the proposal (62^10 possible ids). However, the only requirement is that it needs to be unique across all proposals. Special characters may be troublesome in implementations like, `1.^jta_$4%` and should be avoided for the sake of simplicity."
   },
   "options": {
-    "type": "array",
-    "value": ["option 1 (limit 10,000 characters)","option 2 (limit 10,000 characters)", "..." , "option n (minimum of 2) (limit 10,000 characters)"]
+    "type": "object",
+    "value": {
+      "0": "option 1 (limit 10,000 characters)",
+      "1": "option 2 (limit 10,000 characters)",
+      "...": "...",
+      "n-1": "option n (minimum of 2) (limit 10,000 characters)"
+    }
   },
   "?snapshot": {
     "type": "number",
@@ -61,7 +66,15 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 	"description": "We want to know our holders’ favorite colors.",
 	"collections": ["3208723ec6f65df810-SHELF"],
 	"id": "1e6ttkjfvv",
-	"options": ["Red", "Blue", "Yellow", "Green", "Orange", "Purple", "Pink"],
+	"options": {
+	  "0": "Red",
+	  "1": "Blue",
+	  "2": "Yellow",
+	  "3": "Green",
+	  "4": "Orange",
+	  "5": "Purple",
+	  "6": "Pink"
+	},
 	"passingThreshold": 20,
 	"startDate": 1654041600000,
 	"endDate": 1654560000000,
