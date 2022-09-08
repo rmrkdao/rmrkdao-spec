@@ -23,11 +23,19 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
   "options": {
     "type": "object",
     "value": {
-      "0": "option 1 (limit 10,000 characters)",
-      "1": "option 2 (limit 10,000 characters)",
-      "...": "...",
-      "n-1": "option n (minimum of 2) (limit 10,000 characters)"
-    }
+      "0": {
+        "type": "string",
+        "value": "option 1 (limit 10,000 characters). The keys for all values in the options object must be numeric integers, each less than the MAX_SAFE_INTEGER in javascript (i.e. 9007199254740991) and must not be duplicates of each other. The keys cannot contain letters, spaces, or special characters. The integer used is otherwise arbitrary."
+      },
+      "1": {
+        "type": "string",
+        "value": "option 2 (limit 10,000 characters)"
+      },
+      {"...": "..."},
+      "n-1": {
+        "type": "string",
+        "value": "option n (limit 10,000 characters)"
+      }
   },
   "?snapshot": {
     "type": "number",
