@@ -60,27 +60,27 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 }
 ```
 ## Example
-```
+```json
 {
-	"name": "What is your favorite color?",
-	"description": "We want to know our holders’ favorite colors.",
-	"collections": ["3208723ec6f65df810-SHELF"],
-	"id": "1e6ttkjfvv",
-	"options": {
-	  "0": "Red",
-	  "1": "Blue",
-	  "2": "Yellow",
-	  "3": "Green",
-	  "4": "Orange",
-	  "5": "Purple",
-	  "6": "Pink"
-	},
-	"passingThreshold": 20,
-	"startDate": 1654041600000,
-	"endDate": 1654560000000,
-	"custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
-	"nftWeight": true,
-	"electorate": true
+  "name": "What is your favorite color?",
+  "description": "We want to know our holders’ favorite colors.",
+  "collections": ["3208723ec6f65df810-SHELF"],
+  "id": "1e6ttkjfvv",
+  "options": {
+    "0": "Red",
+    "1": "Blue",
+    "2": "Yellow",
+    "3": "Green",
+    "4": "Orange",
+    "5": "Purple",
+    "6": "Pink"
+  },
+  "passingThreshold": 20,
+  "startDate": 1654041600000,
+  "endDate": 1654560000000,
+  "custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
+  "nftWeight": true,
+  "electorate": true
 }
 ```
 This 20% minimum majority of the electorate proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
