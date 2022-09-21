@@ -5,7 +5,7 @@ A result entity is the certified vote count of a proposal from a custodian, whet
 
 ```json
 {
-  "id": {
+  "proposalId": {
     "type": "string",
     "value": "the proposal id"
   },
@@ -49,6 +49,15 @@ A result entity is the certified vote count of a proposal from a custodian, whet
   }
 }
 ```
+
+## Computed fields
+
+To distinguish the possibility that a proposal is recertified by another custodian or if a custodian resubmits results, a RESULT entity shall have a computed id
+as follows:
+
+`{proposalId}-{custodianKusamaAddress}-{resultBlockNumber}`
+
+For example, `1e6ttkjfvv-DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17-14300000`
 
 ## Example
 
