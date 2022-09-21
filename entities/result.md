@@ -65,7 +65,7 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
 
 ```json
 {
-  "id": "1e6ttkjfvv",
+  "proposalId": "1e6ttkjfvv",
   "count": {
     "0": 50.5,
     "1": 200.25,
