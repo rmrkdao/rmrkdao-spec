@@ -84,6 +84,6 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
 This proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
 
 - The first block whose timestamp exceeds or equals the startDate is the inclusive start block of the proposal.
-- The first block whose timestamp exceeds or equals the endDate is the inclusive end block of the proposal.
+- The last block whose timestamp precedes the endDate is the inclusive end block of the proposal.
 
 The snapshot will be taken at the endDate.
