@@ -35,6 +35,10 @@ A result entity is the certified vote count of a proposal from a custodian, whet
     "type": "array",
     "value": "the option(s) with the most votes. If none of the options meet the passingThreshold, this should be an empty array. More than one value implies a tie."
   },
+  "thresholdDenominator": {
+    "type": "number",
+    "value": "if electorate is false, this is simply the sum of all options' counts. If electorate is true, this value should be the the maximum possible turnout if every NFT in the collection(s) voted and were boosted insofar that equippables exist. The electorate vote potential is a non-trivial calculation on the `2.0.0` version of RMRK. Custodians ought to carefully consider how to calculate the fully optimized electorate vote potential."
+  },
   "recertify": {
     "type": "boolean",
     "value": "if false, this result is being submitted because the custodian was originally assigned to the proposal. If true, the custodian was assigned to recertify the proposal."
@@ -68,6 +72,7 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
     "6": 700.25
   },
   "winningOptions": [6],
+  "thresholdDenominator": 1436.75,
   "recertify": false
 }
 ```
