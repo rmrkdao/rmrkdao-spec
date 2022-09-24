@@ -9,7 +9,7 @@ A VOTE interaction is a [batchAll](https://polkadot.js.org/docs/api/cookbook/tx#
 **`system.remark`**
 
 The format for the system remarks is `0x{bytes(RMRKDAO::VOTE::{version}::{proposal id}::{option index})}`
-- `version` is the version of RMRK of the subjected collections (e.g. ~~1.0.0~~, 2.0.0)
+- `version` is the version of RMRK of the subjected collections (e.g. 2.0.0)
 - `proposal id` is the `id` field in the [proposal](../entities/proposal.md) entity.
 - `option index` is one of the option indexes in the `options` object in the [proposal](../entities/proposal.md) entity.
 
