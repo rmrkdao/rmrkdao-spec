@@ -1,14 +1,20 @@
 # RMRK DAO Specifications and Standards
-An extension of the [RMRK 1.0.0 and 2.0.0 specifications and standards](https://github.com/rmrk-team/rmrk-spec#extending-the-standard).
+An extension of the [RMRK 2.0.0 specifications and standards](https://github.com/rmrk-team/rmrk-spec#extending-the-standard).
 
 ## Interactions
-PROPOSE: allows a collection issuer to create a new proposal pertaining to their collection on-chain.
+[PROPOSE](./interactions/PROPOSE.md): allows a collection issuer to create a new proposal pertaining to their collection on-chain.
 
-VOTE: vote on an existing on-chain proposal.
+[VOTE](./interactions/VOTE.md): vote on an existing on-chain proposal.
 
-REGISTER: register as a RMRK DAO custodian and declare your fees.
+[REGISTER](./interactions/REGISTER.md): register as a RMRK DAO custodian and declare your fees.
+
+[SUBMIT](./interactions/SUBMIT.md): Submit the results of a proposal.
+
+[RECERTIFY](./interactions/RECERTIFY.md): Recertify the results from one custodian with another.
 
 ## Entities
-Proposal: an on-chain entity defining the components of a proposal.
+[Proposal](./entities/proposal.md): an on-chain entity defining the components of a proposal.
 
-Custodian: an on-chain entity defining the wallet and fees of a custodian.
+[Custodian](./entities/custodian.md): an on-chain entity defining the wallet and fees of a custodian.
+
+[Result](./entities/result.md): the counts and outcome of a proposal.
