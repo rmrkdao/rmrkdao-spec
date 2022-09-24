@@ -2,6 +2,8 @@
 
 A proposal is an on-chain entity defining the mechanisms and parameters of a poll for a group of NFT holders in one or more collections.
 
+The keys for all values in the options object must be numeric integers, each less than the MAX_SAFE_INTEGER in javascript (i.e. 9007199254740991) and should not be duplicates of each other. The keys cannot contain letters, spaces, or special characters. The integer used is otherwise arbitrary. Due to `JSON.parse()` behavior, if there are duplicate keys the last duplicate key in the object will be used.
+
 ```json
 {
   "name": {
@@ -25,7 +27,7 @@ A proposal is an on-chain entity defining the mechanisms and parameters of a pol
     "value": {
       "0": {
         "type": "string",
-        "value": "option 1 (limit 10,000 characters). The keys for all values in the options object must be numeric integers, each less than the MAX_SAFE_INTEGER in javascript (i.e. 9007199254740991) and must not be duplicates of each other. The keys cannot contain letters, spaces, or special characters. The integer used is otherwise arbitrary."
+        "value": "option 1 (limit 10,000 characters)."
       },
       "1": {
         "type": "string",
