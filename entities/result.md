@@ -14,7 +14,7 @@ A result entity is the certified vote count of a proposal from a custodian, whet
     "value": {
       "0": {
         "type": "number",
-        "value": "the count for option 1 given the parameters of the proposal."
+        "value": "the count for option 1 given the parameters of the proposal. Note, the keys to the count values must equal the keys of the proposal options. Any duplicate keys will cause JSON.parse() to default to the last duplicate key-value pair in the object."
       },
       "1": {
         "type": "number",
