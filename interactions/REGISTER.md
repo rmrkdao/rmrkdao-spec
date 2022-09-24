@@ -8,7 +8,7 @@ that are assigned to them. Collection issuers need to ensure they are selecting 
 
 A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRKDAO::REGISTER::{version}::{url-encoded json})}`
 
-- `version` is the version of RMRK of the subjected collections (e.g. ~~`1.0.0`~~, `2.0.0`)
+- `version` is the version of RMRK of the subjected collections (e.g. `2.0.0`)
 - `url-encoded json` is the encoded [custodian](../entities/custodian.md) entity
 
 **A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 24 HOURS (every 86,400,000 milliseconds), EVEN IF THEY [DEREGISTER](DEREGISTER.md)**.
@@ -20,7 +20,7 @@ for that standard occurred at least 86,400,000 milliseconds. **THE `proposalFee`
 
 ## Example
 
-Let's say the [custodian entity example](../entities/custodian.md#example) would like to register on the `2.0.0` standard. The wallet
+Let's say the [custodian entity example](../entities/custodian.md#example) would like to register. The wallet
 `DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17` would submit the remark:
 
 ```
