@@ -20,7 +20,7 @@ The keys for all values in the options object must be numeric integers, each les
   },
   "id": {
     "type": "string",
-    "value": "this spec suggests a 10 digit case sensitive alpha-numeric string used to identify the proposal (62^10 possible ids). However, the only requirement is that it needs to be unique across all proposals. Special characters may be troublesome in implementations like, `1.^jta_$4%` and should be avoided for the sake of simplicity."
+    "value": "this must be a 10 digit case sensitive alpha-numeric string [a-zA-Z0-9]{10} used to identify the proposal (62^10 possible ids) and must be unique across all proposals."
   },
   "options": {
     "type": "object",
