@@ -70,6 +70,10 @@ The keys for all values in the options object must be numeric integers, each les
 }
 ```
 ## Example
+
+A proposal entity has two states: unconsolidated and consolidated. The issuer submits the proposal entity as an unconsolidated entity. Once it is processed, assuming it meets the spec, it becomes consolidated. Here's an example of a proposal in both states:
+
+### Unconsolidated
 ```json
 {
   "name": "What is your favorite color?",
@@ -98,4 +102,37 @@ This 20% minimum majority of the electorate proposal begins on June 1st, 2022 at
 - The first block whose timestamp exceeds or equals the startDate is the inclusive start block of the proposal.
 - The last block whose timestamp precedes the endDate is the inclusive end block of the proposal.
 
-The snapshot will be taken at the endDate.
+Since the snapshot was omitted, the snapshot will be taken at the endDate by default.
+
+Let's assume this was submitted with the appropriate balance transfer at block 12920000. Here's is what the consolidated entity would look like:
+
+### Consolidated
+```json
+{
+  "id": "1e6ttkjfvv",
+  "block": 12920000,
+  "name": "What is your favorite color?",
+  "description": "We want to know our holders’ favorite colors.",
+  "collections": ["3208723ec6f65df810-SHELF"],
+  "options": {
+    "0": "Red",
+    "1": "Blue",
+    "2": "Yellow",
+    "3": "Green",
+    "4": "Orange",
+    "5": "Purple",
+    "6": "Pink"
+  },
+  "passingThreshold": 20,
+  "startDate": 1654041600000,
+  "snapshot": 1654560000000,
+  "endDate": 1654560000000,
+  "custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
+  "nftWeight": true,
+  "electorate": true,
+  "owner": "DhvRNnnsyykGpmaa9GMjK9H4DeeQojd5V5qCTWd1GoYwnTc",
+  "voteFee": "50000000000"
+}
+```
+
+Note that the `voteFee` is consolidated to ensure voters are guaranteed to only pay the custodian's fee at the time the proposal was submitted.
