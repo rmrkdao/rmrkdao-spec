@@ -11,12 +11,12 @@ A REGISTER interaction is a `system.remark` whose format is `0x{bytes(RMRKDAO::R
 - `version` is the version of RMRK of the subjected collections (e.g. `2.0.0`)
 - `url-encoded json` is the encoded [custodian](../entities/custodian.md) entity
 
-**A CUSTODIAN CANNOT REGISTER FOR THE SAME STANDARD MORE THAN ONCE PER 24 HOURS (every 86,400,000 milliseconds), EVEN IF THEY [DEREGISTER](DEREGISTER.md)**.
+**A CUSTODIAN CANNOT REGISTER MORE THAN ONCE PER 24 HOURS (every 14,400 blocks), EVEN IF THEY [DEREGISTER](DEREGISTER.md)**.
 
 ## Considerations
 
-If a custodian is already registered and submits a REGISTER interaction for the same version of RMRK, their fees are updated as long as their last REGISTER interaction
-for that standard occurred at least 86,400,000 milliseconds. **THE `proposalFee` AND THE `voteFee` OF A CUSTODIAN AT THE MOMENT OF BEING ASSIGNED A PROPOSAL SHALL APPLY TO THAT PROPOSAL AND ITS VOTES. SAME APPLIES TO RECERTIFY ASSIGNMENTS** This prevents any sort of bait and switch.
+If a custodian is already registered and submits a REGISTER interaction, their fees are updated as long as their last REGISTER interaction
+for that standard occurred at least 14,400 blocks ago. **THE `proposalFee` AND THE `voteFee` OF A CUSTODIAN AT THE MOMENT OF BEING ASSIGNED A PROPOSAL SHALL APPLY TO THAT PROPOSAL AND ITS VOTES. SAME APPLIES TO RECERTIFY ASSIGNMENTS** This prevents any sort of bait and switch.
 
 ## Example
 
