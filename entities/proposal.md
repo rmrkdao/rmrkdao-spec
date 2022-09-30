@@ -76,10 +76,10 @@ A proposal entity has two states: unconsolidated and consolidated. The issuer su
 ### Unconsolidated
 ```json
 {
+  "id": "1e6ttkjfvv",
   "name": "What is your favorite color?",
   "description": "We want to know our holders’ favorite colors.",
   "collections": ["3208723ec6f65df810-SHELF"],
-  "id": "1e6ttkjfvv",
   "options": {
     "0": "Red",
     "1": "Blue",
