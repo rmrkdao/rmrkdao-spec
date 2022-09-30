@@ -41,7 +41,7 @@ The keys for all values in the options object must be numeric integers, each les
   },
   "?snapshot": {
     "type": "number",
-    "value": "(optional) the Unix timestamp in milliseconds when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
+    "value": "(optional if electorate is false; required if electorate is true) the Unix timestamp in milliseconds when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
   },
   "?passingThreshold": {
     "type": "number",
