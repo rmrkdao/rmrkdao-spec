@@ -1,4 +1,4 @@
-# RMRK DAO Specifications and Standards (MVP for initial launch of rmrkdao.app)
+# RMRK DAO Specifications and Standards (MVP for initial launch of [rmrkdao.app](https://rmrkdao.app))
 An extension of the [RMRK 2.0.0 specifications and standards](https://github.com/rmrk-team/rmrk-spec#extending-the-standard).
 
 ## Interactions
@@ -7,6 +7,8 @@ An extension of the [RMRK 2.0.0 specifications and standards](https://github.com
 [VOTE](./interactions/VOTE.md): vote on an existing on-chain proposal.
 
 [REGISTER](./interactions/REGISTER.md): register as a RMRK DAO custodian and declare your fees.
+
+[DEREGISTER](./interactions/DEREGISTER.md): remove your registration as a RMRK DAO custodian
 
 [SUBMIT](./interactions/SUBMIT.md): Submit the results of a proposal.
 
