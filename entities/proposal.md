@@ -43,6 +43,10 @@ The keys for all values in the options object must be numeric integers, each les
     "type": "number",
     "value": "(optional) the Unix timestamp in milliseconds when the owner snapshot should be taken. This can be any date after the creation of the collection. If omitted, thesnapshot date = endDate. Limit 365 days after endDate."
   },
+  "?passingThreshold": {
+    "type": "number",
+    "value": "(optional) the percentage of the turnout vote that an option needs in order to pass (e.g. a percentage of 20 means 20%). If omitted, a simple majority is used."
+  },
   "?startDate": {
     "type": "number",
     "value": "(optional) the Unix timestamp in milliseconds when voting starts. If omitted, the timestamp of the block of the proposal creation will be used as the start date. Limit 365 days after date of proposal submission on-chain."
@@ -58,6 +62,10 @@ The keys for all values in the options object must be numeric integers, each les
   "nftWeight": {
     "type": "boolean",
     "value": "if true 1 NFT = 1 vote, if false 1 wallet = 1 vote."
+  },
+  "electorate": {
+    "type": "boolean",
+    "value": "If true, the passing threshold is weighed against the entire electorate's vote weight.\n\nFor example, if there are 100 possible votes in the electorate and there are three options (A, B, C) to a proposal, if this key is true and passingThreshold is omitted, then in order for option A to pass there needs to be greater than 50 votes. If the result of this vote is A: 40, B: 20, C: 10, D: 30, none of the options pass. However in this example, if this key is false, option A would pass. The electorate vote weight depends on a couple parameters. If there are 50 unique owners of a collection of 100 NFTs, the electorate's vote weight would equal 100 if nftWeight = true, and 50 if false." 
   }
 }
 ```
@@ -77,13 +85,15 @@ The keys for all values in the options object must be numeric integers, each les
     "5": "Purple",
     "6": "Pink"
   },
+  "passingThreshold": 20,
   "startDate": 1654041600000,
   "endDate": 1654560000000,
   "custodian": "DaoQkNgxobgpKfd9NmETnWe6FCfDERduSTR2YiFDRGKvL17",
-  "nftWeight": true
+  "nftWeight": true,
+  "electorate": true
 }
 ```
-This proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
+This 20% minimum majority of the electorate proposal begins on June 1st, 2022 at 00:00 UTC and ends June 7th, 2022 at 00:00 UTC. Since Kusama blocks occur every 6 seconds:
 
 - The first block whose timestamp exceeds or equals the startDate is the inclusive start block of the proposal.
 - The last block whose timestamp precedes the endDate is the inclusive end block of the proposal.
