@@ -10,8 +10,6 @@ An extension of the [RMRK 2.0.0 specifications and standards](https://github.com
 
 [SUBMIT](./interactions/SUBMIT.md): Submit the results of a proposal.
 
-[RECERTIFY](./interactions/RECERTIFY.md): Recertify the results from one custodian with another.
-
 ## Entities
 [Proposal](./entities/proposal.md): an on-chain entity defining the components of a proposal.
 
