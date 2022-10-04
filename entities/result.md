@@ -37,7 +37,7 @@ A result entity is the certified vote count of a [proposal](./proposal.md) from 
   },
   "thresholdDenominator": {
     "type": "number",
-    "value": "if electorate is false for the proposal, this is simply the sum of all options' counts. If electorate is true, this value should be the the maximum possible turnout if every NFT in the collection(s) voted and were boosted insofar that equippables exist. The electorate vote potential is a non-trivial calculation on the `2.0.0` version of RMRK. Custodians ought to carefully consider how to calculate the fully optimized electorate vote potential."
+    "value": "if electorate is false for the proposal, this is simply the sum of all options' counts. If electorate is true and the proposal's nftWeight is true, this value should be the number unburned NFTs in all of the collections in the proposal's collections array. If electorate is true and nftWeight is false, this value should be the number of unique NFT holders across all of the collections in the proposal's collecitons array."
   },
   "recertify": {
     "type": "boolean",
