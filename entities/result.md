@@ -62,16 +62,16 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
 {
   "proposalId": "1e6ttkjfvv",
   "count": {
-    "0": 50.5,
-    "1": 200.25,
+    "0": 50,
+    "1": 200,
     "2": 25,
-    "3": 150.25,
-    "4": 10.5,
+    "3": 150,
+    "4": 10,
     "5": 300,
-    "6": 700.25
+    "6": 700
   },
   "winningOptions": [6],
-  "thresholdDenominator": 1436.75,
+  "thresholdDenominator": 2254,
   "recertify": false
 }
 ```
