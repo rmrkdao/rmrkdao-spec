@@ -1,7 +1,6 @@
 # Result
 
-A result entity is the certified vote count of a [proposal](./proposal.md) from a [custodian](./custodian.md), whether they were assigned the proposal or they were assigned to
-[RECERTIFY](../interactions/RECERTIFY.md). The count object keys should equal the proposal's options' keys. Any omitted keys will default to a count of 0 and any duplicate keys in the count object will default to the last duplicate key's count. Any keys that do not match any of the proposal's options' keys will be disregarded.
+A result entity is the certified vote count of a [proposal](./proposal.md) from a [custodian](./custodian.md) that was assigned to the proposal. The count object keys should equal the proposal's options' keys. Any omitted keys will default to a count of 0 and any duplicate keys in the count object will default to the last duplicate key's count. Any keys that do not match any of the proposal's options' keys will be disregarded.
 
 ```json
 {
