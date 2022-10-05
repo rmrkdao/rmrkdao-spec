@@ -1,3 +1,4 @@
+# UNDER DEVELOPMENT
 # RMRK DAO Specifications and Standards
 An extension of the [RMRK 2.0.0 specifications and standards](https://github.com/rmrk-team/rmrk-spec#extending-the-standard).
 
