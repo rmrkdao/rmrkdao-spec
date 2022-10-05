@@ -62,16 +62,18 @@ Let's say [this proposal example](proposal.md#example) has been completed. The r
 {
   "proposalId": "1e6ttkjfvv",
   "count": {
-    "0": 50.5,
-    "1": 200.25,
-    "2": 25,
-    "3": 150.25,
-    "4": 10.5,
-    "5": 300,
-    "6": 700.25
+    "0": 18,
+    "1": 24,
+    "2": 6,
+    "3": 15,
+    "4": 11,
+    "5": 27,
+    "6": 45
   },
-  "winningOptions": [6],
-  "thresholdDenominator": 1436.75,
+  "winningOptions": [],
+  "thresholdDenominator": 2254,
   "recertify": false
 }
 ```
+
+Note that since the proposal required a `passingThreshold` of 20%, no options were determined the `winningOption`. This is because there weren't many NFTs that met the `equippableParameters` threshold of 10 equipped NFTs.
